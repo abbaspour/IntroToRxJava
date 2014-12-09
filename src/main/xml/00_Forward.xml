@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns="http://docbook.org/ns/docbook"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://docbook.org/ns/docbook http://www.oasis-open.org/docbook/xml/5.0b3/xsd/docbook.xsd">
+    
+    <title>Forward</title>
+
+    <para>
+        Reactive programming is not a new concept. I remember studying my first Event Driven
+        module for Visual Basic 5 in 2000. Even then the technology (Visual Basic 5) was
+        already considered somewhat dated. Long before VB5 and the turn of the millennium,
+        we have seen languages supporting events. Over time languages like Smalltalk, Delphi
+        and the .NET languages have popularized reactive or event-driven programming paradigms.
+        This not to say that events are passé: current trends such as CEP (Complex
+        Event Processing), CQRS (Command Query Responsibility Segregation) and rich immersive
+        GUIs, all have events as a fundamental part of their makeup.
+    </para>
+
+</chapter>
