@@ -12,10 +12,10 @@ XSL_EPUB=$(XSL_BASE)/epub/docbook.xsl
 KINDLE_GEN=/Users/amin/tools/KindleGen_Mac_i386_v2_9/kindlegen
 
 MAIN=src/main/xml/book.xml
-DIST=target/main
-TARGETS=$(DIST).html
+DIST=target/IntroToRx
+#TARGETS=$(DIST).html
 
-all: $(TARGETS)
+all: html
 
 html: $(MAIN) $(XSL_HTML)
 	@$(XSLTPROC) --xinclude -o $(DIST).html $(XSL_HTML) $(MAIN)
@@ -30,5 +30,11 @@ epub: $(MAIN) $(XSL_EPUB)
 mobi: $(DIST).html
 	$(KINDLE_GEN) $(DIST).html
 
+target:
+	@mkdir target
+
+view: html
+	open $(DIST).html
+
 clean:
-	rm -rf target
+	@rm -rf target

@@ -7,9 +7,12 @@
 
     <title>Intro To RxJava</title>
 
-    <xi:include href="00_Forward.xml"/>
+    <part title="Perface">
+        <xi:include href="00_Forward.xml"/>
+    </part>
 
-    <part title="Part 1">
+    <part title="Getting Started">
+        <xi:include href="01_WhyRx.xml"/>
     </part>
 
 </book>
