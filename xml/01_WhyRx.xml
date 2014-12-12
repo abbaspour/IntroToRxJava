@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns="http://docbook.org/ns/docbook"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://docbook.org/ns/docbook http://www.oasis-open.org/docbook/xml/5.0b3/xsd/docbook.xsd">
+
+    <title>Why Rx?</title>
+
+    <para>
+        Users expect real time data. They want their tweets now. Their order confirmed now.
+        They need prices accurate as of now. Their online games need to be responsive. As
+        a developer, you demand fire-and-forget messaging. You don't want to be blocked
+        waiting for a result. You want to have the result pushed to you when it is ready.
+        Even better, when working with result sets, you want to receive individual results
+        as they are ready. You do not want to wait for the entire set to be processed before
+        you see the first row. The world has moved to push; users are waiting for us to
+        catch up. Developers have tools to push data, this is easy. Developers need tools
+        to react to push data.
+
+    </para>
+
+    <section>
+        <title>When is Rx appropriate?</title>
+        <para>
+            Rx offers a natural paradigm for dealing with sequences of events. A sequence can
+            contain zero or more events. Rx proves to be most valuable when composing sequences
+            of events.
+        </para>
+    </section>
+
+    <section>
+        <title>Rx in Action</title>
+
+        <programlisting dir="ltr" language="java"
+                        linenumbering="unnumbered">
+            public class Test {
+                public static void main() {
+                    int i;
+                    String s = "sample string";
+
+                }
+            }
+        </programlisting>
+
+    </section>
+
+</chapter>
