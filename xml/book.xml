@@ -8,11 +8,6 @@
     <title>Intro To RxJava</title>
 
     <xi:include href="00_Forward.xml"/>
-<!--
-    <preface label="Perface" id="0">
-        <xi:include href="00_Forward.xml"/>
-    </preface>
--->
 
     <part title="Getting Started" id="1" label="1 - Getting Started">
         <xi:include href="01_WhyRx.xml"/>
