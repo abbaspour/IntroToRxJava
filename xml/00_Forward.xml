@@ -9,7 +9,7 @@
     <para>
         All the credit of this book goes to
         <ulink url="http://leecampbell.blogspot.com.au/">Lee Campbell</ulink>
-        author of <emphasis>Intro To Rx</emphasis>.
+        author of<emphasis>Intro To Rx</emphasis>.
 
         I literally just forked the book source code in github and ported it from Rx.NET to RxJava.
     </para>
@@ -71,68 +71,68 @@
             change
             the way you design and build software for the following reasons:
         </para>
-    </section>
-    <itemizedlist>
-        <listitem>The way that it tackles the Observer pattern is a divorce from .NET events toward
-            a Java-style interface pattern but far more refined.
-        </listitem>
-        <listitem>The way it tackles concurrency is quite a shift how many .NET developers would have
-            done it before.
-        </listitem>
-        <listitem>The abundance of (extension) methods in the library.</listitem>
-        <listitem>The way in which it integrates with LINQ to leverage LINQ's composability &amp;
-            declarative style, makes Rx very usable and discoverable to those already familiar
-            with LINQ and<tag>IEnumerable&lt;T&gt;</tag>.
-        </listitem>
-        <listitem>The way it can help any .NET developer that works with event driven and/or asynchronous
-            programs. Developers of Rich Clients, Web Clients and Services alike can all benefit
-            from Rx.
-        </listitem>
-        <listitem>The future plans seem even grander, but that is a different book for some time in
-            the future :-)
-        </listitem>
-    </itemizedlist>
+        <itemizedlist>
+            <listitem>The way that it tackles the Observer pattern is a divorce from .NET events toward
+                a Java-style interface pattern but far more refined.
+            </listitem>
+            <listitem>The way it tackles concurrency is quite a shift how many .NET developers would have
+                done it before.
+            </listitem>
+            <listitem>The abundance of (extension) methods in the library.</listitem>
+            <listitem>The way in which it integrates with LINQ to leverage LINQ's composability &amp;
+                declarative style, makes Rx very usable and discoverable to those already familiar
+                with LINQ and<tag>IEnumerable&lt;T&gt;</tag>.
+            </listitem>
+            <listitem>The way it can help any .NET developer that works with event driven and/or asynchronous
+                programs. Developers of Rich Clients, Web Clients and Services alike can all benefit
+                from Rx.
+            </listitem>
+            <listitem>The future plans seem even grander, but that is a different book for some time in
+                the future :-)
+            </listitem>
+        </itemizedlist>
 
-    <para>
-        This book aims to teach you:
-    </para>
-    <itemizedlist>
-        <listitem>about the new types that Rx will provide</listitem>
-        <listitem>about the extension methods and how to use them</listitem>
-        <listitem>how to manage subscriptions to "sequences" of data</listitem>
-        <listitem>how to visualize "sequences" of data and sketch your solution before coding it</listitem>
-        <listitem>how to deal with concurrency to your advantage and avoid common pitfalls</listitem>
-        <listitem>how to compose, aggregate and transform streams</listitem>
-        <listitem>how to test your Rx code</listitem>
-        <listitem>some guidance on best practices when using Rx.</listitem>
-    </itemizedlist>
-    <para>
-        The best way to learn Rx is to use it. Reading the theory from this book will only
-        help you be familiar with Rx, but will not really enable you to fully understand
-        Rx. You can download the latest version of Rx from the Microsoft Data Developer
-        site (<ulink url="http://msdn.microsoft.com/en-us/data/gg577609">
-        http://msdn.microsoft.com/en-us/data/gg577609</ulink>)
-        or if you use NuGet you can just download Rx via that.
-    </para>
-    <para>
-        My experience with Rx is straight from the trenches. I worked on a team of exceptional
-        developers on a project that was an early adopter of Rx (late 2009). The project
-        was a financial services application that started off life as a Silverlight project
-        then expanded into an integration project. We used Rx everywhere; client side in
-        Silverlight 3/4, and server side in .NET 3.5/4.0. We used Rx eagerly and sometimes
-        too eagerly. We were past leading edge, we were
-        <emphasis>bleeding</emphasis>
-        edge. We were finding
-        bugs in the early releases and posting proposed fixes to the guys at Microsoft.
-        We were constantly updating to the latest version. It cost the project to be early
-        adopters, but in time the payment was worth it. Rx allowed us to massively simplify
-        an application that was inherently asynchronous, highly concurrent and targeted
-        low latencies. Similar workflows that I had written in previous projects were pages
-        of code long; now with Rx were several lines of LINQ. Trying to test asynchronous
-        code on clients (WPF/Win Forms/Silverlight) was a constant challenge, but Rx solved
-        that too. Today if you ask a question on the Rx Forums, you will most likely be
-        answered by someone from that team (or Dave Sexton).
-    </para>
+        <para>
+            This book aims to teach you:
+        </para>
+        <itemizedlist>
+            <listitem>about the new types that Rx will provide</listitem>
+            <listitem>about the extension methods and how to use them</listitem>
+            <listitem>how to manage subscriptions to "sequences" of data</listitem>
+            <listitem>how to visualize "sequences" of data and sketch your solution before coding it</listitem>
+            <listitem>how to deal with concurrency to your advantage and avoid common pitfalls</listitem>
+            <listitem>how to compose, aggregate and transform streams</listitem>
+            <listitem>how to test your Rx code</listitem>
+            <listitem>some guidance on best practices when using Rx.</listitem>
+        </itemizedlist>
+        <para>
+            The best way to learn Rx is to use it. Reading the theory from this book will only
+            help you be familiar with Rx, but will not really enable you to fully understand
+            Rx. You can download the latest version of Rx from the Microsoft Data Developer
+            site (<ulink url="http://msdn.microsoft.com/en-us/data/gg577609">
+            http://msdn.microsoft.com/en-us/data/gg577609</ulink>)
+            or if you use NuGet you can just download Rx via that.
+        </para>
+        <para>
+            My experience with Rx is straight from the trenches. I worked on a team of exceptional
+            developers on a project that was an early adopter of Rx (late 2009). The project
+            was a financial services application that started off life as a Silverlight project
+            then expanded into an integration project. We used Rx everywhere; client side in
+            Silverlight 3/4, and server side in .NET 3.5/4.0. We used Rx eagerly and sometimes
+            too eagerly. We were past leading edge, we were
+            <emphasis>bleeding</emphasis>
+            edge. We were finding
+            bugs in the early releases and posting proposed fixes to the guys at Microsoft.
+            We were constantly updating to the latest version. It cost the project to be early
+            adopters, but in time the payment was worth it. Rx allowed us to massively simplify
+            an application that was inherently asynchronous, highly concurrent and targeted
+            low latencies. Similar workflows that I had written in previous projects were pages
+            of code long; now with Rx were several lines of LINQ. Trying to test asynchronous
+            code on clients (WPF/Win Forms/Silverlight) was a constant challenge, but Rx solved
+            that too. Today if you ask a question on the Rx Forums, you will most likely be
+            answered by someone from that team (or Dave Sexton).
+        </para>
+    </section>
 
     <section>
         <title>Acknowledgements</title>

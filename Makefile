@@ -26,11 +26,11 @@ SAXON=java -client -cp $(SAXON_CP) $(SAXON_ARGS) $(XSLTHL_ARGS) com.icl.saxon.St
 all: html
 
 html-xsltproc: $(MAIN) $(XSL_HTML)
-	@#$(XSLTPROC) --xinclude -o $(DIST).html $(XSL_HTML) $(MAIN)
-	@#$(XSLTPROC) --xinclude -o $(DIST).html $(STYLE) $(MAIN)
+	@$(XSLTPROC) --xinclude -o $(DIST).html $(XSL_HTML) $(MAIN)
+	@$(XSLTPROC) --xinclude -o $(DIST).html $(STYLE) $(MAIN)
 
 html: $(MAIN) $(XSL_HTML)
-	$(SAXON) -o $(DIST).html $(MAIN) $(STYLE)
+	@$(SAXON) -o $(DIST).html $(MAIN) $(STYLE)
 
 pdf: $(MAIN) $(XSL_FO)
 	@$(XSLTPROC) --xinclude -o $(DIST).fo $(XSL_FO) $(MAIN)
@@ -43,8 +43,11 @@ mobi: $(DIST).html
 	$(KINDLE_GEN) $(DIST).html
 
 webhelp: $(MAIN) $(XSL_WEBSITE)
-	$(SAXON) -o target/site.html $(MAIN) $(XSL_WEBHELP)
+	@$(SAXON) -o target/site.html $(MAIN) $(XSL_WEBHELP)
 	@cp -r common docs
+
+publish: webhelp
+	@cp -rv docs/* ../IntroToRxJava-website/
 
 target:
 	@mkdir target

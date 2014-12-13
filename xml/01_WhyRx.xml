@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://docbook.org/ns/docbook http://www.oasis-open.org/docbook/xml/5.0b3/xsd/docbook.xsd">
 
-    <title>Why Rx?</title>
+    <title>Why RxJava?</title>
 
     <para>
         Users expect real time data. They want their tweets now. Their order confirmed now.
@@ -18,13 +18,58 @@
 
     </para>
 
+    <para>
+        Welcome to
+        <ulink url="https://github.com/ReactiveX/RxJava">
+            Reactive Extensions for Java
+        </ulink>
+        (RxJava) a Java VM implementation of Reactive Extensions.
+        a library for composing asynchronous and event-based programs by using observable sequences.
+        It extends the observer pattern to support sequences of data/events and adds operators that
+        allow you to compose sequences together declaratively while abstracting away concerns about
+        things like low-level threading, synchronization, thread-safety and concurrent data structures.
+    </para>
+
+    <itemizedlist>
+        <listitem>Zero Dependencies</listitem>
+        <listitem>&lt; 700KB Jar</listitem>
+        <listitem>Java 6+ &amp; Android 2.3+</listitem>
+        <listitem>Java 8 lambda support</listitem>
+        <!-- todo: links -->
+        <listitem>Polyglot (Scala, Groovy, Clojure and Kotlin)</listitem>
+        <listitem>Non-opinionated about source of concurrency (threads, pools, event loops, fibers, actors, etc)
+        </listitem>
+        <listitem>Async or synchronous execution</listitem>
+        <listitem>Virtual time and schedulers for parameterized concurrency</listitem>
+    </itemizedlist>
+
     <section>
-        <title>When is Rx appropriate?</title>
+        <title>When is RxJava appropriate?</title>
         <para>
             Rx offers a natural paradigm for dealing with sequences of events. A sequence can
             contain zero or more events. Rx proves to be most valuable when composing sequences
             of events.
         </para>
+
+        <section>
+            <title>Should use Rx</title>
+            <para>
+                Managing events like these is what Rx was built for:
+            </para>
+            <!--
+            <ul>
+                <li>UI events like mouse move, button click</li>
+                <li>Domain events like property changed, collection updated, "Order Filled", "Registration
+                    accepted" etc.</li>
+                <li>Infrastructure events like from file watcher, system and WMI events</li>
+                <li>Integration events like a broadcast from a message bus or a push event from WebSockets
+                    API or other low latency middleware like <a href="http://www.my-channels.com">Nirvana</a></li>
+                <li>Integration with a CEP engine like <a href="http://www.microsoft.com/sqlserver/en/us/solutions-technologies/business-intelligence/complex-event-processing.aspx">
+                    StreamInsight</a> or <a href="http://www.streambase.com">StreamBase</a>.</li>
+            </ul>
+            -->
+        </section>
+
     </section>
 
     <section>
@@ -33,11 +78,11 @@
         <programlisting dir="ltr" language="java"
                         linenumbering="unnumbered">
             public class Test {
-                public static void main() {
-                    int i;
-                    String s = "sample string";
+            public static void main() {
+            int i;
+            String s = "sample string";
 
-                }
+            }
             }
         </programlisting>
 
