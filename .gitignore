@@ -109,3 +109,4 @@ UpgradeLog*.htm
 .idea
 *.iml
 target
+docs

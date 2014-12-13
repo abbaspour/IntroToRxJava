@@ -4,11 +4,12 @@ FOP_BASE=/usr/local/Cellar/fop/1.1/libexec
 FOP=$(FOP_BASE)/fop
 FOP_CONF=$(FOP_BASE)/conf/fop.xconf
 
-XSL_BASE=/usr/local/Cellar/docbook-xsl/1.78.1/docbook-xsl
-XSL_HTML=$(XSL_BASE)/html/docbook.xsl
-XSL_FO=$(XSL_BASE)/fo/docbook.xsl
-XSL_EPUB=$(XSL_BASE)/epub/docbook.xsl
-XSL_XSLTHL=$(XSL_BASE)/highlighting/xslthl-config.xml
+XSL_BASE    :=  /usr/local/Cellar/docbook-xsl/1.78.1/docbook-xsl
+XSL_HTML    :=  $(XSL_BASE)/html/docbook.xsl
+XSL_FO      :=  $(XSL_BASE)/fo/docbook.xsl
+XSL_EPUB    :=  $(XSL_BASE)/epub/docbook.xsl
+XSL_XSLTHL  :=  $(XSL_BASE)/highlighting/xslthl-config.xml
+XSL_WEBHELP :=  $(XSL_BASE)/webhelp/xsl/webhelp.xsl
 
 KINDLE_GEN=/Users/amin/tools/KindleGen_Mac_i386_v2_9/kindlegen
 
@@ -24,10 +25,12 @@ SAXON=java -client -cp $(SAXON_CP) $(SAXON_ARGS) $(XSLTHL_ARGS) com.icl.saxon.St
 
 all: html
 
-html: $(MAIN) $(XSL_HTML)
+html-xsltproc: $(MAIN) $(XSL_HTML)
 	@#$(XSLTPROC) --xinclude -o $(DIST).html $(XSL_HTML) $(MAIN)
 	@#$(XSLTPROC) --xinclude -o $(DIST).html $(STYLE) $(MAIN)
-	@$(SAXON) -o $(DIST).html $(MAIN) $(STYLE)
+
+html: $(MAIN) $(XSL_HTML)
+	$(SAXON) -o $(DIST).html $(MAIN) $(STYLE)
 
 pdf: $(MAIN) $(XSL_FO)
 	@$(XSLTPROC) --xinclude -o $(DIST).fo $(XSL_FO) $(MAIN)
@@ -39,6 +42,10 @@ epub: $(MAIN) $(XSL_EPUB)
 mobi: $(DIST).html
 	$(KINDLE_GEN) $(DIST).html
 
+webhelp: $(MAIN) $(XSL_WEBSITE)
+	$(SAXON) -o target/site.html $(MAIN) $(XSL_WEBHELP)
+	@cp -r common docs
+
 target:
 	@mkdir target
 
@@ -46,4 +53,4 @@ view: html
 	open $(DIST).html
 
 clean:
-	@rm -rf target
+	@rm -rf target docs

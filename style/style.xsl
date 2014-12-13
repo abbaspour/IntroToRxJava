@@ -4,25 +4,17 @@
                 exclude-result-prefixes="xslthl"
                 version="1.0">
 
-<!--
     <xsl:import href="/usr/local/Cellar/docbook-xsl/1.78.1/docbook-xsl/html/docbook.xsl"/>
     <xsl:import href="/usr/local/Cellar/docbook-xsl/1.78.1/docbook-xsl/html/highlight.xsl"/>
--->
-
-    <xsl:import href="/Users/amin/tools/docbook-xsl-1.77.1/html/docbook.xsl"/>
-    <xsl:import href="/Users/amin/tools/docbook-xsl-1.77.1/html/highlight.xsl"/>
 
     <xsl:param name="html.stylesheet" select="../css/ubuntu.css"/>
     <xsl:param name="use.extensions" select="1"/>
     <xsl:param name="textinsert.extension" select="1"/>
     <xsl:param name="generate.toc" select="'book toc'"/>
     <xsl:param name="highlight.source" select="1"/>
-    <xsl:param name="message" select="1"/>
 
     <xsl:template match='xslthl:keyword'>
         <b class="color: green"><xsl:apply-templates/></b>
     </xsl:template>
-
-    <!--<xsl:param name="html.stylesheet">highlighter/prettify.css</xsl:param>-->
 
 </xsl:stylesheet>
