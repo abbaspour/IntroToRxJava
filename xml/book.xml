@@ -9,8 +9,10 @@
 
     <xi:include href="00_Forward.xml"/>
 
-    <part title="Getting Started" id="1" label="1 - Getting Started">
+    <part id="1" label="1 - Getting Started">
+        <title>Getting Started</title>
         <xi:include href="01_WhyRx.xml"/>
     </part>
 
+    <xi:include href="20_UsageGuidelines.xml"/>
 </book>
