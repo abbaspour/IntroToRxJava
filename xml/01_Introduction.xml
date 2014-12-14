@@ -78,7 +78,8 @@
                 It is difficult to use Futures to optimally compose conditional asynchronous
                 execution flows (or impossible, since latencies of each request vary at runtime).
                 This can be done, of course, but it quickly becomes complicated (and thus error-prone)
-                or it prematurely blocks on Future.get(), which eliminates the benefit of asynchronous execution.
+                or it prematurely blocks on<tag>Future.get()</tag>, which eliminates the benefit of asynchronous
+                execution.
             </para>
             <para>
                 RxJava Observables on the other hand are intended for composing flows and sequences

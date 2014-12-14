@@ -14,8 +14,8 @@
         <!--<xi:include href="01_WhyRx.xml"/>-->
 
         <xi:include href="01_Introduction.xml"/>
-        <!--<xi:include href="02_HelloWorld.xml"/>-->
-        <!--<xi:include href="03_KeyTypes.xml"/>-->
+        <xi:include href="02_HelloWorld.xml"/>
+        <xi:include href="03_DesignUsingRxJava.xml"/>
     </part>
 
     <xi:include href="20_UsageGuidelines.xml"/>

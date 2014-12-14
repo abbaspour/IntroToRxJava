@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns="http://docbook.org/ns/docbook"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://docbook.org/ns/docbook http://www.oasis-open.org/docbook/xml/5.0b3/xsd/docbook.xsd">
+
+    <title>How to Design Using RxJava</title>
+
+    <para>
+        To use RxJava you create Observables (which emit data items), transform those Observables in various ways to get
+        the precise data items that interest you (by using Observable operators), and then observe and react to these
+        sequences of interesting items (by implementing Observers or Subscribers and then subscribing them to the
+        resulting transformed Observables).
+    </para>
+
+    <sect1>
+        <title>Creating Observables</title>
+    </sect1>
+
+    <sect1>
+        <title>Creating an Observable from an Existing Data Structure</title>
+    </sect1>
+
+
+    <sect1>
+        <title>Creating an Observable via the <tag>create()</tag> method</title>
+
+        <sect2>
+            <title>Synchronous Observable Example</title>
+        </sect2>
+
+        <sect2>
+            <title>Asynchronous Observable Example</title>
+        </sect2>
+    </sect1>
+
+    <sect1>
+        <title>Transforming Observables with Operators</title>
+    </sect1>
+
+    <sect1>
+        <title>Error Handling</title>
+    </sect1>
+
+</chapter>
