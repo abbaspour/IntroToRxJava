@@ -7,15 +7,32 @@
 
     <title>Intro To RxJava</title>
 
+    <info>
+        <legalnotice>
+            <para>Legal Notice</para>
+        </legalnotice>
+        <copyright>
+            <year>2014-2015</year>
+            <holder>Amin Abbaspour</holder>
+        </copyright>
+        <author>
+            <personname>Amin Abbaspour</personname>
+            <email>a.abbaspour@gmail.com</email>
+        </author>
+        <pubdate>December 2014</pubdate>
+    </info>
+
     <xi:include href="00_Forward.xml"/>
 
-    <part id="1" label="1 - Getting Started">
+    <part id="1">
         <title>Getting Started</title>
-        <!--<xi:include href="01_WhyRx.xml"/>-->
-
         <xi:include href="01_Introduction.xml"/>
-        <xi:include href="02_HelloWorld.xml"/>
-        <xi:include href="03_DesignUsingRxJava.xml"/>
+        <xi:include href="02_HowToUseRxJava.xml"/>
+        <xi:include href="03_KeyTypes.xml"/>
+    </part>
+
+    <part id="2">
+        <title>Sequence Basics</title>
     </part>
 
     <xi:include href="20_UsageGuidelines.xml"/>

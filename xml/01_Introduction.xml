@@ -17,6 +17,19 @@
         concurrent data structures, and non-blocking I/O.
     </para>
 
+    <itemizedlist>
+        <listitem>Zero Dependencies</listitem>
+        <listitem>&lt; 700KB Jar</listitem>
+        <listitem>Java 6+ &amp; Android 2.3+</listitem>
+        <listitem>Java 8 lambda support</listitem>
+        <!-- todo: links -->
+        <listitem>Polyglot (Scala, Groovy, Clojure and Kotlin)</listitem>
+        <listitem>Non-opinionated about source of concurrency (threads, pools, event loops, fibers, actors, etc)
+        </listitem>
+        <listitem>Async or synchronous execution</listitem>
+        <listitem>Virtual time and schedulers for parameterized concurrency</listitem>
+    </itemizedlist>
+
     <para>
         It supports Java 6 or higher and JVM-based languages such as Groovy, Clojure, JRuby, Kotlin and Scala.
     </para>
@@ -336,4 +349,26 @@ getDataFromNetwork()
         </para>
     </sect1>
 
+    <sect1>
+        <title>Other RxJava Libraries</title>
+
+        <para>
+            The following external libraries can work with RxJava:
+        </para>
+
+        <itemizedlist>
+            <listitem>Hystrix latency and fault tolerance bulkheading library.</listitem>
+            <listitem>Camel RX provides an easy way to reuse any of the Apache Camel components, protocols, transports
+                and data formats with the RxJava API
+            </listitem>
+            <listitem>rxjava-http-tail allows you to follow logs over HTTP, like tail -f</listitem>
+            <listitem>mod-rxvertx - Extension for VertX that provides support for Reactive Extensions (RX) using the
+                RxJava library
+            </listitem>
+            <listitem>rxjava-jdbc - use RxJava with jdbc connections to stream ResultSets and do functional composition
+                of statements
+            </listitem>
+            <listitem>rtree - immutable in-memory R-tree and R*-tree with RxJava api including backpressure</listitem>
+        </itemizedlist>
+    </sect1>
 </chapter>

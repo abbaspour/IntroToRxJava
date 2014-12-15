@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns="http://docbook.org/ns/docbook"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://docbook.org/ns/docbook http://www.oasis-open.org/docbook/xml/5.0b3/xsd/docbook.xsd">
+
+    <title>How to use RxJava?</title>
+
+    <para>
+        The following sample implementations of “Hello World” in Java and Scala create an Observable
+        from a list of Strings, and then subscribe to this Observable with a method that prints “Hello String!” for each
+        string emitted by the Observable.
+    </para>
+
+    <sect1>
+        <title>Getting Binaries</title>
+
+        <para>
+            You can find binaries and dependency information for Maven, Ivy, Gradle, SBT, and others at
+            http://search.maven.org.
+        </para>
+
+        <para>
+            Example for Maven:
+        </para>
+
+        <programlisting language="xml"><![CDATA[
+<dependency>
+    <groupId>io.reactivex</groupId>
+    <artifactId>rxjava</artifactId>
+    <version>1.0.0</version>
+</dependency>
+                ]]>
+        </programlisting>
+    </sect1>
+
+    <sect1>
+        <title>Building</title>
+
+        <para>To check out and build the RxJava source, issue the following commands:</para>
+
+        <sect2>
+            <title>Troubleshooting</title>
+        </sect2>
+    </sect1>
+
+    <sect1>
+        <title>Hello World!</title>
+
+        <sect2>
+            <title>Java 6</title>
+            <programlisting linenumbering="unnumbered" language="java">
+                <![CDATA[
+public static void hello(String... names) {
+    Observable.from(names).subscribe(new Action1<String>() {
+        @Override
+        public void call(String s) {
+            System.out.println("Hello " + s + "!");
+        }
+
+    });
+}
+        ]]>
+            </programlisting>
+        </sect2>
+
+        <sect2>
+            <title>Java 8</title>
+            <programlisting linenumbering="unnumbered" language="java">
+                <![CDATA[
+public static void hello(String... names) {
+    Observable.from(names).subscribe(s -> System.out.println("Hello " + s + "!");
+}
+        ]]>
+            </programlisting>
+        </sect2>
+
+
+        <sect2>
+            <title>Scala</title>
+
+            <programlisting linenumbering="unnumbered" language="scala">
+                <![CDATA[
+import rx.lang.scala.Observable
+
+def hello(names: String*) {
+  Observable.from(names) subscribe { n =>
+    println(s"Hello $n!")
+  }
+}
+        ]]>
+            </programlisting>
+        </sect2>
+    </sect1>
+</chapter>
