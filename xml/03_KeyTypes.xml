@@ -6,18 +6,56 @@
     <title>Key Types</title>
 
     <para>
-        There are two key types to understand when working with Rx, and a subset of auxiliary types that will help you
-        to learn Rx more effectively. The IObserver&lt;T&gt; and IObservable&lt;T&gt; form the fundamental building
-        blocks for Rx, while implementations of ISubject&lt;TSource, TResult&gt; reduce the learning curve for developers new
-        to Rx.
+        There are two key types to understand when working with RxJava, and a subset of auxiliary types that will help
+        you to learn Rx more effectively. The
+        <tag>Observer&lt;T&gt;</tag>
+        and
+        <tag>Observable&lt;T&gt;</tag>
+        form the fundamental building blocks for Rx, while implementations of
+        <tag>Subject&lt;TSource, TResult&gt;</tag>
+        reduce the learning curve for developers new to RxJava.
     </para>
 
     <sect1>
         <title>Observable&lt;T&gt;</title>
+
+        <para>
+            In RxJava an object that implements the <tag>Observer</tag> interface subscribes to an object of the
+            Observable class. Then that subscriber reacts to whatever item or sequence of items the Observable
+            object emits. This pattern facilitates concurrent operations because it does not need to block while
+            waiting for the Observable to emit objects, but instead it creates a sentry in the form of a
+            subscriber that stands ready to react appropriately at whatever future time the Observable does so.
+        </para>
+
+        <para>
+            This section explains what the reactive pattern is and what <tag>Observable</tag>s and <tag>Observer</tag>s
+            are (and how observers subscribe to Observables). Next chapters show how you use the variety of
+            Observable operators to link Observables together and change their behaviors.
+        </para>
+
+        <mediaobject>
+            <caption>Observable Marble</caption>
+            <imageobject>
+                <imagedata fileref="img/observable.png" format="PNG" width="50%" depth="50%" align="center"/>
+            </imageobject>
+        </mediaobject>
+
+        <sect2>
+            <title>Background</title>
+        </sect2>
+
+        <sect2>
+            <title>Establishing Subscribers</title>
+        </sect2>
+
+        <sect2>
+            <title>“Hot” and “Cold” Observables</title>
+        </sect2>
+
     </sect1>
 
     <sect1>
-        <title>Observer&lt;T&gt;</title>
+        <title>Subscriber&lt;T&gt;</title>
     </sect1>
 
     <sect1>

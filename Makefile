@@ -31,6 +31,8 @@ html-xsltproc: $(MAIN) $(XSL_HTML)
 
 html: $(MAIN) $(XSL_HTML)
 	@$(SAXON) -o $(DIST).html $(MAIN) $(STYLE)
+	@mkdir -p target/img
+	@cp img/* target/img
 
 pdf: $(MAIN) $(XSL_FO)
 	@$(XSLTPROC) --xinclude -o $(DIST).fo $(XSL_FO) $(MAIN)
@@ -45,6 +47,8 @@ mobi: $(DIST).html
 webhelp: $(MAIN) $(XSL_WEBSITE)
 	@$(SAXON) -o target/site.html $(MAIN) $(XSL_WEBHELP)
 	@cp -r common docs
+	@mkdir -p docs/img
+	@cp img/* docs/img
 
 publish: webhelp
 	@cp -rv docs/* ../IntroToRxJava-website/
