@@ -20,15 +20,50 @@
         <title>Observable&lt;T&gt;</title>
 
         <para>
-            In RxJava an object that implements the <tag>Observer</tag> interface subscribes to an object of the
-            Observable class. Then that subscriber reacts to whatever item or sequence of items the Observable
+            In RxJava an object that implements the
+            <tag>Observer</tag>
+            interface subscribes to an object of the
+            <tag>Observable</tag>
+            class. Then that subscriber reacts to whatever item or sequence of items the Observable
             object emits. This pattern facilitates concurrent operations because it does not need to block while
             waiting for the Observable to emit objects, but instead it creates a sentry in the form of a
             subscriber that stands ready to react appropriately at whatever future time the Observable does so.
         </para>
 
         <para>
-            This section explains what the reactive pattern is and what <tag>Observable</tag>s and <tag>Observer</tag>s
+            <programlisting language="java"><![CDATA[
+public class Observable<T> {
+    public final Subscription subscribe(final Observer<? super T> observer) {
+        return subscribe(new Subscriber<T>() {
+
+            @Override
+            public void onCompleted() {
+                observer.onCompleted();
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                observer.onError(e);
+            }
+
+            @Override
+            public void onNext(T t) {
+                observer.onNext(t);
+            }
+
+        });
+    }
+
+    public final Subscription subscribe(Subscriber<? super T> subscriber) {
+    }
+
+}
+                    ]]>
+            </programlisting>
+        </para>
+
+        <para>
+            This section explains what the reactive pattern is and what<tag>Observable</tag>s and<tag>Observer</tag>s
             are (and how observers subscribe to Observables). Next chapters show how you use the variety of
             Observable operators to link Observables together and change their behaviors.
         </para>
@@ -52,6 +87,45 @@
             <title>“Hot” and “Cold” Observables</title>
         </sect2>
 
+    </sect1>
+
+    <sect1>
+        <title>Subscription</title>
+        <para>
+            Subscription returns from
+            <tag>Observable.subscribe(Subscriber)</tag>
+            to allow unsubscribing.
+        </para>
+
+        <para>
+            <programlisting language="java"><![CDATA[
+public interface Subscription {
+    public void unsubscribe();
+    public boolean isUnsubscribed();
+}
+                ]]>
+            </programlisting>
+        </para>
+
+    </sect1>
+
+    <sect1>
+        <title>Observer&lt;T&gt;</title>
+
+        <para>
+            Provides a mechanism for receiving push-based notifications.
+        </para>
+
+        <para>
+            <programlisting language="java"><![CDATA[
+public interface Observer<T> {
+    public abstract void onCompleted();
+    public abstract void onError(Throwable e);
+    public abstract void onNext(T t);
+}
+            ]]>
+            </programlisting>
+        </para>
     </sect1>
 
     <sect1>

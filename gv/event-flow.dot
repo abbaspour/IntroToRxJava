@@ -1,0 +1,4 @@
+digraph "RxJava" {
+    rankdir=LR;
+    Observable -> Subscriber [ label="Subscription" ];
+}

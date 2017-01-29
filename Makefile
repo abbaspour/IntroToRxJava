@@ -50,6 +50,9 @@ webhelp: $(MAIN) $(XSL_WEBSITE)
 	@mkdir -p docs/img
 	@cp img/* docs/img
 
+dot: gv/event-flow.dot
+	dot -Tpng -o img/event-flow.png gv/event-flow.dot
+
 publish: webhelp
 	@cp -rv docs/* ../IntroToRxJava-website/
 
